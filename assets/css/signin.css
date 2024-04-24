@@ -154,3 +154,12 @@ body {
     color: #3FA9FA;
     text-decoration: none;
 }
+
+@media only screen and (max-widh: 60px) {
+    .sign-in-form {
+        width: 95vw;
+        border: 2px solid #3FA9FA;
+        border-radius: 10px;
+        padding: 0 20px;
+    }
+}

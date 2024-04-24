@@ -1,0 +1,327 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: max-content;
+    width: 100vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: white;
+    overflow-x: hidden;
+}
+
+
+/*Header Begins*/
+
+#header {
+    height: 100px;
+    width: 100vw;
+}
+
+.header-top {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header-top-left .logo {
+    height: 40px;
+    width: 150px;
+}
+
+.header-top-left .logo img {
+    height: 100%;
+    width: 100%;
+}
+
+.header-top-right .user {
+    height: 25px;
+    width: 25px;
+}
+
+.header-top-right .user a img {
+    height: 100%;
+    width: 100%;
+}
+
+.header-bottom {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anchor-container {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.anchor-container a {
+    color: rgb(65, 169, 245);
+    text-decoration: none;
+}
+
+
+/*Header Ends*/
+
+
+/*Add project begins*/
+
+#add-project {
+    min-height: calc(100vh - 140px);
+    width: 100vw;
+    height: max-content;
+}
+
+.add-project {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.add-project-from {
+    height: max-content;
+    width: 80vw;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    padding: 0 20px;
+}
+
+.form-header {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-details-container {
+    height: max-content;
+    width: 100%;
+}
+
+.form-details-top {
+    height: max-content;
+    width: 100%;
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: auto auto;
+    justify-items: center;
+    align-items: center;
+}
+
+#project-type {
+    height: 40px;
+    border: 1px solid black;
+    outline: none;
+    font-size: 15px;
+}
+
+.details {
+    height: max-content;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.details label {
+    margin: 5px 0;
+}
+
+.details input {
+    height: 40px;
+    width: 25vw;
+    outline: none;
+    padding: 0 5px;
+}
+
+.error {
+    color: red;
+}
+
+.details textarea {
+    min-height: 50vh;
+    max-height: 50vh;
+    max-width: 100%;
+    min-width: 100%;
+    outline: none;
+    padding: 5px;
+}
+
+.submit-btn-container {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    border: 2px solid #3FA9FA;
+    color: #3FA9FA;
+    border-radius: 50px;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    border: white;
+    color: white;
+    background: #3FA9FA;
+}
+
+@media only screen and (max-width: 800px) {
+    .form-details-top {
+        flex-direction: column;
+    }
+    .details input {
+        width: 100%;
+    }
+}
+
+
+/*Add project ends*/
+
+
+/*Direction Begins*/
+
+#direction {
+    display: none;
+}
+
+#direction.active {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+}
+
+.direction {
+    height: max-content;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+}
+
+.direction-top {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #3FA9FA;
+}
+
+.direction-bottom {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.direction-bottom a {
+    padding: 10px 15px;
+    border: 2px solid #3FA9FA;
+    border-radius: 10px;
+    color: #3FA9FA;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.direction-bottom a:hover {
+    background: #3FA9FA;
+    color: white;
+}
+
+#footer.active,
+#add-project.active,
+#header.active {
+    display: none;
+}
+
+
+/*Direction Ends*/
+
+
+/*Footer Begins*/
+
+#footer {
+    height: 100px;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin-top: 75px;
+}
+
+.footer {
+    height: 100%;
+    width: 90%;
+    background: #3FA9FA;
+    display: flex;
+    align-items: center;
+}
+
+.footer-content {
+    height: max-content;
+    width: 100%;
+}
+
+.footer-bottom {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+.footer-bottom h3 {
+    color: white;
+    font-family: fantasy;
+}
+
+.footer-bottom p {
+    color: white;
+}
+
+
+/*Footer Ends*/
+
+@media only screen and (max-width: 600px) {
+    #hero.active,
+    #services.active,
+    #web-builder.active,
+    #blog.active,
+    #footer.active {
+        display: none;
+    }
+    .footer-bottom {
+        flex-direction: column;
+        height: max-content;
+    }
+    .footer-bottom p {
+        font-size: 10px;
+    }
+}
+
+
+/*General responsiveness Begins*/
