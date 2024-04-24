@@ -1,0 +1,104 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: #3FA9FA;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#signup {
+    height: 100vh;
+    width: 100vw;
+}
+
+.signup {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signup-form {
+    width: 30vw;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    background: white;
+}
+
+.signup-header {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid silver;
+}
+
+.form-content {
+    width: 100%;
+    padding: 0 20px;
+}
+
+.details {
+    position: relative;
+    height: 55px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.details input {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    padding: 0 10px;
+    border: none;
+    border-bottom: 2px solid silver;
+    transition: 0.3s ease;
+}
+
+.details input::placeholder {
+    color: silver;
+}
+
+.details input:focus {
+    border-bottom: 2px solid #3FA9FA;
+}
+
+.details label {
+    margin: 5px;
+    color: silver;
+}
+
+.error {
+    color: red;
+}
+
+.signup-btn-container {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 2px solid silver;
+    background: transparent;
+    cursor: pointer;
+    color: silver;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    border: 2px solid #3FA9FA;
+    color: #3FA9FA;
+}

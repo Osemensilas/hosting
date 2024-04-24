@@ -1,0 +1,143 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: max-content;
+    width: 100vw;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: white;
+    overflow-x: hidden;
+}
+
+
+/*Header Begins*/
+
+#header {
+    height: 100px;
+    width: 100vw;
+}
+
+.header-top {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.header-top-left .logo {
+    height: 40px;
+    width: 150px;
+}
+
+.header-top-left .logo img {
+    height: 100%;
+    width: 100%;
+}
+
+.header-top-right .user {
+    height: 25px;
+    width: 25px;
+}
+
+.header-top-right .user a img {
+    height: 100%;
+    width: 100%;
+}
+
+.header-bottom {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.anchor-container {
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.anchor-container a {
+    color: rgb(65, 169, 245);
+    text-decoration: none;
+}
+
+
+/*Header Ends*/
+
+
+/*Chats Begins*/
+
+#chats {
+    height: calc(100vh - 100px);
+    width: 100vw;
+}
+
+.chats {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chats-container {
+    width: 50%;
+    height: 95%;
+    background: rgb(65, 169, 245);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 10px 0;
+}
+
+.user-msg-container {
+    height: 100px;
+    width: 95%;
+    border-radius: 10px;
+    background: white;
+    padding: 10px 0;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.user-msg-container:last-child {
+    margin-bottom: 0;
+}
+
+.user-msg-container-top {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.message-container-bottom {
+    height: 70px;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.msg-container-right {
+    color: yellowgreen;
+}
+
+.message-container-bottom p {
+    color: rgb(65, 169, 245);
+}
+
+
+/*Chats Ends*/

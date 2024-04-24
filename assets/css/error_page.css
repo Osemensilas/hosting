@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: white;
+}
+
+#error_page {
+    height: 100vh;
+    width: 100vw;
+}
+
+.error_page {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.error_page h2 {
+    font-size: 35px;
+    margin-bottom: 20px;
+    color: #333333;
+}
+
+.error_page p {
+    font-size: 45px;
+    color: #333333;
+}

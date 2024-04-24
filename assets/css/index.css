@@ -1,0 +1,1026 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: white;
+}
+
+#hero {
+    position: relative;
+    height: calc(100vh - 110px);
+    width: 100vw;
+    background: url(../imgs/hostig.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+#hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: black;
+    opacity: 0.4;
+}
+
+#hero img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.hero {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 0 0 40px;
+}
+
+.hero-content {
+    width: 55%;
+    z-index: 90;
+}
+
+.hero-content h1 {
+    margin: 0 0 20px 0;
+    font-size: 40px;
+    color: white;
+    z-index: 90;
+}
+
+.hero-content p {
+    color: white;
+    font-size: 20px;
+    z-index: 90;
+}
+
+
+/*Hero Responsiveness Begins*/
+
+@media only screen and (max-width: 1000px) {
+    #hero {
+        background-position: right;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .hero {
+        padding: 0 0 0 15px;
+    }
+    .hero-content {
+        width: 85%;
+        z-index: 90;
+    }
+    .hero-content h1 {
+        font-size: 30px;
+    }
+    #hero {
+        height: calc(100vh - 50px);
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .hero-content h1 {
+        font-size: 20px;
+    }
+    .hero-content p {
+        font-size: 12px;
+    }
+}
+
+
+/*Hero Responsiveness Ends*/
+
+
+/*Hero Ends*/
+
+
+/*Domain Begins*/
+
+#domain {
+    background: transparent;
+}
+
+.domain {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+.domain-content {
+    width: 70vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.domain-search {
+    height: 50px;
+    margin-bottom: 20px;
+    outline: none;
+    border: 2px solid rgb(65, 169, 245);
+    border-radius: 10px;
+    padding: 0 5px;
+    text-align: center;
+    color: #333333;
+    font-size: 20px;
+    background: rgb(196, 227, 248);
+    background: transparent;
+}
+
+.error {
+    height: 30px;
+    width: 100%;
+    background: rgb(245, 53, 53);
+    justify-content: center;
+    align-items: center;
+    color: white;
+    display: none;
+}
+
+.error.active {
+    display: flex;
+}
+
+.domain-submit-btn-container {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.domain-submit {
+    padding: 10px 15px;
+    border: 2px solid rgb(65, 169, 245);
+    font-size: 20px;
+    color: rgb(65, 169, 245);
+    cursor: pointer;
+    border-radius: 10px;
+    background: transparent;
+}
+
+.domain-description {
+    height: 50vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.domain-description-content {
+    height: 60px;
+    display: flex;
+    background: rgb(196, 227, 248);
+}
+
+.domain-description-content img {
+    height: 12px;
+    width: 12px;
+    font-weight: 300;
+}
+
+.domain-description-content p {
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1100px) {
+    .domain-description {
+        height: 15vh;
+    }
+    .domain {
+        height: 30vh;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .domain-description-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .domain-description-content {
+        height: 100px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+    .domain {
+        height: 50vh;
+    }
+    .domain-description {
+        height: 40vh;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .domain-content {
+        width: 95%;
+    }
+    .domain-description-content {
+        height: 200px;
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+
+/*Domain ends*/
+
+
+/*Hosting Begins*/
+
+.hosting {
+    height: 100vh;
+    width: 100vw;
+}
+
+.hosting-header {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 20px;
+    background: rgb(196, 227, 248);
+}
+
+.hosting-header p {
+    font-size: 30px;
+    color: #333333;
+}
+
+.hosting-content {
+    min-height: calc(100vh - 60px);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.hosting-card {
+    position: relative;
+    width: 450px;
+    min-height: 500px;
+    border: 2px solid silver;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.recommended-container {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    height: 30px;
+    width: 250px;
+    border: 2px solid rgb(65, 169, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(65, 169, 245);
+}
+
+.hosting-card-header {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hosting-card-header h3 {
+    font-size: 30px;
+}
+
+.hosting-cost {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hosting-cost p {
+    font-size: 35px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hosting-cost p img {
+    height: 25px;
+    width: 25px;
+}
+
+.hosting-details {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 0 0;
+}
+
+.hosting-submit-btn-container {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hosting-submit-btn-container.active {
+    display: none;
+}
+
+.hosting-submit-btn-container a {
+    padding: 15px 40px;
+    border: 2px solid rgb(65, 169, 245);
+    background: rgb(65, 169, 245);
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+@media only screen and (max-width: 1100px) {
+    .hosting {
+        height: max-content;
+        width: 100vw;
+    }
+    .hosting-content {
+        min-height: max-content;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .hosting-card {
+        margin: 30px 0;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .hosting-card {
+        width: 400px;
+    }
+    .hosting-cost p {
+        font-size: 25px;
+    }
+    .hosting-cost p img {
+        height: 20px;
+        width: 20px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .hosting {
+        height: max-content;
+        min-height: 100vh;
+        width: 100vw;
+    }
+    .hosting-header {
+        height: 150px;
+    }
+    .hosting-content {
+        padding: 20px 0;
+        flex-direction: column;
+    }
+    .hosting-card {
+        width: 95vw;
+        margin: 0 0 20px 0;
+    }
+    .hosting-cost p {
+        font-size: 25px;
+    }
+    .hosting-cost p img {
+        height: 18px;
+        width: 18px;
+    }
+    .contact-us-header h2,
+    .contact-us-header p {
+        text-align: center;
+        margin: 0 0 10px 0;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    .hosting-header p {
+        font-size: 25px;
+    }
+    .hosting-cost p {
+        font-size: 20px;
+    }
+    .hosting-card-header h3 {
+        font-size: 20px;
+    }
+}
+
+
+/*Hosting Ends*/
+
+
+/*Contact Us Begins*/
+
+#contact-us {
+    height: 70vh;
+    width: 100vw;
+    background: #333333;
+}
+
+.contact-us {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-us-header {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-us-header h2,
+.contact-us-header p {
+    color: white;
+}
+
+.chat-btn {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chat-btn a {
+    padding: 10px 15px;
+    border: 2px solid rgb(65, 169, 245);
+    color: rgb(65, 169, 245);
+    text-decoration: none;
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 300px) {
+    .contact-us-header {
+        height: 160px;
+    }
+}
+
+
+/*Contact Us Ends*/
+
+
+/*About Us Begins*/
+
+#about-us {
+    height: 100vh;
+    width: 100vw;
+}
+
+.about-us {
+    height: 100%;
+    width: 100%;
+}
+
+.about-us-top {
+    height: 40%;
+    width: 100%;
+}
+
+.about-us-top-header {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-us-top-header h2 {
+    font-size: 30px;
+    font-weight: 300;
+    color: #333333;
+}
+
+.about-us-top-content {
+    height: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.about-us-top-content p {
+    text-align: center;
+}
+
+.about-us-bottom {
+    height: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+}
+
+.bottom-container {
+    width: 400px;
+    background: #eeeded;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.bottom-container-img-container {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-container-img-container img {
+    height: 100%;
+    width: 80px;
+}
+
+.bottom-container-header {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bottom-container-header h3 {
+    font-weight: 300;
+    color: #333333;
+}
+
+.bottom-container-content p {
+    text-align: center;
+    line-height: 25px;
+}
+
+@media only screen and (max-width: 1100px) {
+    .about-us-top {
+        height: 10%;
+    }
+    .about-us-bottom {
+        height: 90%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .about-us-bottom {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .about-us-top {
+        height: 25%;
+        width: 100%;
+    }
+    .about-us-bottom {
+        height: 75%;
+        flex-direction: column;
+        align-items: center;
+    }
+    .bottom-container {
+        width: 350px;
+    }
+    .bottom-container-header h3 {
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    #about-us {
+        min-height: 100vh;
+        height: max-content;
+    }
+    .about-us-top {
+        height: max-content;
+    }
+    .about-us-top-header {
+        height: 80px;
+    }
+    .about-us-bottom {
+        height: 75%;
+        flex-direction: column;
+        align-items: center;
+        margin: 20px 0 0 0;
+    }
+    .bottom-container {
+        width: 270px;
+    }
+}
+
+
+/*About Us Ends*/
+
+
+/*Chats Begins*/
+
+#chats {
+    position: fixed;
+    top: 90%;
+    left: 94%;
+    height: 50px;
+    width: 50px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+#chats img {
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+    #chats {
+        left: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #chats {
+        left: 85%;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    #chats {
+        top: 90%;
+        left: 80%;
+    }
+}
+
+#main-chat {
+    position: fixed;
+    bottom: 15%;
+    left: 75%;
+    height: max-content;
+    width: 300px;
+    background: rgb(196, 227, 248);
+    border-radius: 10px;
+    display: none;
+    transition: 0.3s ease;
+    z-index: 90;
+}
+
+#main-chat.active {
+    display: block;
+}
+
+.main-chat-top {
+    height: max-content;
+    width: 100%;
+}
+
+.main-chat-top-top {
+    height: 30px;
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.cancel-icon {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.cancel-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 1px;
+    width: 15px;
+    background: black;
+    transform: rotate(45deg);
+}
+
+.cancel-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 1px;
+    width: 15px;
+    background: black;
+    transform: rotate(-45deg);
+}
+
+.main-chat-top-bottom {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10px;
+}
+
+.main-chat-top-bottom img {
+    height: 30px;
+    width: 30px;
+    margin: 0 5px 0 0;
+}
+
+.main-chat-top-bottom p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.main-chat-customer-detail {
+    height: max-content;
+    width: 100%;
+    padding: 20px 10px;
+}
+
+.main-chat-customer-detail p {
+    font-size: 12px;
+    color: #333333;
+}
+
+.main-chat-customer-detail p a {
+    text-decoration: none;
+    color: rgb(65, 169, 245);
+    cursor: pointer;
+}
+
+.main-chat-details-top img {
+    height: 12px;
+    width: 20px;
+    transition: 0.3s ease;
+}
+
+.main-chat-details-top img.active {
+    transform: rotate(180deg);
+}
+
+.main-chat-details-top.user {
+    display: none;
+}
+
+.new-user-details {
+    height: max-content;
+    width: 100%;
+}
+
+.new-user-details.active {
+    display: none;
+    transition: 0.4s ease-in-out;
+}
+
+.detail {
+    height: max-content;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail label {
+    margin: 5px 0;
+    color: #333333;
+}
+
+.detail input {
+    height: 40px;
+    width: 100%;
+    background: rgb(209, 229, 243);
+    border: 1px solid #333333;
+    border-radius: 5px;
+    padding: 0 5px;
+    font-size: 15px;
+    outline: none;
+}
+
+.detail-submit-btn-container {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-submit-btn-container .submit-btn {
+    height: 40px;
+    width: 90%;
+    background: transparent;
+    font-size: 15px;
+    border: 1px solid #333333;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.main-chat-details-bottom {
+    height: 200px;
+    width: 100%;
+    overflow-y: auto;
+    display: none;
+}
+
+.main-chatbox-content {
+    height: max-content;
+    width: 100%;
+}
+
+.main-chat-details-bottom.active {
+    display: block;
+}
+
+.no-chat-yet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+}
+
+.no-chat-yet p {
+    text-align: center;
+}
+
+.no-chat-yet.active {
+    display: none;
+}
+
+.sender-column {
+    height: max-content;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px 10px 0;
+}
+
+.sender-column .message-container {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 90;
+}
+
+.sender-column .message-container p {
+    border: 2px solid rgb(65, 169, 245);
+    padding: 10px 15px;
+    background: rgb(65, 169, 245);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.reciever-column {
+    height: max-content;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 0 10px 10px;
+}
+
+.reciever-column .message-container {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 90;
+}
+
+.reciever-column .message-container p {
+    border: 2px solid rgb(65, 169, 245);
+    padding: 10px 15px;
+    background: rgb(65, 169, 245);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.chats-bottom {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 5px 0 0 0;
+}
+
+.chats-bottom.active {
+    display: none;
+}
+
+.typed-message {
+    min-height: 90%;
+    max-height: 90%;
+    min-width: 80%;
+    max-width: 80%;
+    outline: none;
+    border: none;
+    background: rgb(151, 210, 252);
+    padding: 5px;
+    font-size: 15px;
+    margin: 0 10px 0 0;
+    z-index: 90;
+}
+
+.submit-btn {
+    padding: 10px 15px;
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    z-index: 90;
+}
+
+.submit-btn img {
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width: 1050px) {
+    #main-chat {
+        left: 65%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #main-chat {
+        left: 60%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #main-chat {
+        left: 40%;
+    }
+    .domain-content {
+        width: 95vw;
+    }
+    .domain-search {
+        width: 100%;
+    }
+    #about-us {
+        height: max-content;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #main-chat {
+        left: 25%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #main-chat {
+        left: 15%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #main-chat {
+        width: 250px;
+        left: 5%;
+    }
+}
+
+
+/*Chats Ends*/

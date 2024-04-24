@@ -1,0 +1,492 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #333333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: white;
+}
+
+
+/*Hero Begins*/
+
+#domain-search {
+    height: max-content;
+    width: 100vw;
+}
+
+.domain-search {
+    position: relative;
+    height: 65vh;
+    width: 100%;
+    background: url(../imgs/john-schnobrich-FlPc9_VocJ4-unsplash.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.domain-search::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.4;
+}
+
+.domain-searh-container {
+    height: max-content;
+    width: 100%;
+    margin: 0 0 40px 0;
+}
+
+.domain-search-container-header {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.domain-search-container-header h2 {
+    font-size: 30px;
+    font-weight: 300;
+    color: #333333;
+}
+
+.domain-search-conteiner-content {
+    height: 45px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.domain-search-conteiner-content .domain-search-input {
+    height: 40px;
+    width: 350px;
+    border: 1px solid silver;
+    padding: 0 5px;
+    font-size: 15px;
+    outline: none;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.domain-search-conteiner-content .search-btn {
+    height: 40px;
+    width: 80px;
+    background: rgb(65, 169, 245);
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    border: none;
+    font-size: 15px;
+}
+
+.domain-serch-header {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.domain-serch-header a {
+    text-decoration: none;
+    color: rgb(65, 169, 245);
+    font-size: 20px;
+    z-index: 9;
+}
+
+.domain-searh-container p {
+    text-align: center;
+    margin: 5px 0;
+    font-size: 15px;
+}
+
+.domain-searh-container p a {
+    text-decoration: none;
+    color: rgb(65, 169, 245);
+}
+
+
+/*Hero Ends*/
+
+
+/*Chats Begins*/
+
+#chats {
+    position: fixed;
+    top: 90%;
+    left: 94%;
+    height: 50px;
+    width: 50px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+#chats img {
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+    #chats {
+        left: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #chats {
+        left: 85%;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    #chats {
+        top: 90%;
+        left: 80%;
+    }
+}
+
+#main-chat {
+    position: fixed;
+    bottom: 15%;
+    left: 75%;
+    height: max-content;
+    width: 300px;
+    background: rgb(196, 227, 248);
+    border-radius: 10px;
+    display: none;
+    transition: 0.3s ease;
+    z-index: 888;
+}
+
+#main-chat.active {
+    display: block;
+}
+
+.main-chat-top {
+    height: max-content;
+    width: 100%;
+}
+
+.main-chat-top-top {
+    height: 30px;
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.cancel-icon {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.cancel-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 1px;
+    width: 15px;
+    background: black;
+    transform: rotate(45deg);
+}
+
+.cancel-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 1px;
+    width: 15px;
+    background: black;
+    transform: rotate(-45deg);
+}
+
+.main-chat-top-bottom {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10px;
+}
+
+.main-chat-top-bottom img {
+    height: 30px;
+    width: 30px;
+    margin: 0 5px 0 0;
+}
+
+.main-chat-top-bottom p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.main-chat-customer-detail {
+    height: max-content;
+    width: 100%;
+    padding: 20px 10px;
+}
+
+.main-chat-customer-detail p {
+    font-size: 12px;
+    color: #333333;
+}
+
+.main-chat-customer-detail p a {
+    text-decoration: none;
+    color: rgb(65, 169, 245);
+    cursor: pointer;
+}
+
+.main-chat-details-top img {
+    height: 12px;
+    width: 20px;
+    transition: 0.3s ease;
+}
+
+.main-chat-details-top img.active {
+    transform: rotate(180deg);
+}
+
+.main-chat-details-top.user {
+    display: none;
+}
+
+.new-user-details {
+    height: max-content;
+    width: 100%;
+}
+
+.new-user-details.active {
+    display: none;
+    transition: 0.4s ease-in-out;
+}
+
+.detail {
+    height: max-content;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail label {
+    margin: 5px 0;
+    color: #333333;
+}
+
+.detail input {
+    height: 40px;
+    width: 100%;
+    background: rgb(209, 229, 243);
+    border: 1px solid #333333;
+    border-radius: 5px;
+    padding: 0 5px;
+    font-size: 15px;
+    outline: none;
+}
+
+.detail-submit-btn-container {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-submit-btn-container .submit-btn {
+    height: 40px;
+    width: 90%;
+    background: transparent;
+    font-size: 15px;
+    border: 1px solid #333333;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.main-chat-details-bottom {
+    height: 200px;
+    width: 100%;
+    overflow-y: auto;
+    display: none;
+}
+
+.main-chatbox-content {
+    height: max-content;
+    width: 100%;
+}
+
+.main-chat-details-bottom.active {
+    display: block;
+}
+
+.no-chat-yet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+}
+
+.no-chat-yet p {
+    text-align: center;
+}
+
+.no-chat-yet.active {
+    display: none;
+}
+
+.sender-column {
+    height: max-content;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px 10px 0;
+}
+
+.sender-column .message-container {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 90;
+}
+
+.sender-column .message-container p {
+    border: 2px solid rgb(65, 169, 245);
+    padding: 10px 15px;
+    background: rgb(65, 169, 245);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.reciever-column {
+    height: max-content;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 0 10px 10px;
+}
+
+.reciever-column .message-container {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 90;
+}
+
+.reciever-column .message-container p {
+    border: 2px solid rgb(65, 169, 245);
+    padding: 10px 15px;
+    background: rgb(65, 169, 245);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.chats-bottom {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 5px 0 0 0;
+}
+
+.chats-bottom.active {
+    display: none;
+}
+
+.typed-message {
+    min-height: 90%;
+    max-height: 90%;
+    min-width: 80%;
+    max-width: 80%;
+    outline: none;
+    border: none;
+    background: rgb(151, 210, 252);
+    padding: 5px;
+    font-size: 15px;
+    margin: 0 10px 0 0;
+    z-index: 90;
+}
+
+.submit-btn {
+    padding: 10px 15px;
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    z-index: 90;
+}
+
+.submit-btn img {
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width: 1050px) {
+    #main-chat {
+        left: 65%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #main-chat {
+        left: 60%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #main-chat {
+        left: 40%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #main-chat {
+        left: 25%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #main-chat {
+        left: 15%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #main-chat {
+        width: 250px;
+        left: 5%;
+    }
+}
+
+
+/*Chats Ends*/

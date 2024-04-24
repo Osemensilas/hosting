@@ -1,0 +1,144 @@
+#contact-us {
+    height: max-content;
+    min-height: 100vh;
+    width: 100vw;
+    padding: 0 20px;
+}
+
+.contact-us {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.contact-us-right {
+    height: 100vh;
+    width: 40%;
+}
+
+.contact-right-header {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.contact-right-header h2 {
+    font-weight: 300;
+}
+
+.conact-us-right-content {
+    height: max-content;
+    width: 100%;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.conact-us-right-content li {
+    padding: 0 0 10px 0;
+}
+
+.contact-us-left {
+    height: 100vh;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 0 0 0;
+}
+
+.contact-form {
+    height: max-content;
+    width: 90%;
+    border: 2px solid rgb(65, 169, 245);
+    border-radius: 10px;
+}
+
+.form-header {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid rgb(65, 169, 245);
+}
+
+.form-header h3 {
+    font-weight: 300;
+}
+
+.form-content {
+    height: 100%;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+}
+
+.details label {
+    color: silver;
+    margin: 0 0 5px 0;
+}
+
+.details input {
+    height: 40px;
+    width: 100%;
+    padding: 0 5px;
+    font-size: 15px;
+    outline: none;
+    border: 1px solid silver;
+}
+
+.details textarea {
+    min-height: 200px;
+    max-height: 200px;
+    min-width: 100%;
+    max-width: 100%;
+    outline: none;
+    padding: 5px;
+    font-size: 15px;
+    border: 1px solid silver;
+}
+
+.error {
+    color: red;
+}
+
+.submit-btn-container {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-btn {
+    padding: 10px 25px;
+    border: 2px solid rgb(65, 169, 245);
+    color: rgb(65, 169, 245);
+    background: transparent;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+    .contact-us {
+        flex-direction: column;
+    }
+    .contact-us-right {
+        height: max-content;
+        width: 100%;
+    }
+    .contact-us-left {
+        height: max-content;
+        width: 100%;
+        padding: 50px 0 20px 0;
+    }
+}

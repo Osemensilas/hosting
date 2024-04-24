@@ -1,0 +1,609 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: #333333;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background: white;
+}
+
+
+/*Hero Begins*/
+
+#hero {
+    height: 60vh;
+    width: 100vw;
+}
+
+.hero {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    background: url(../imgs/taras-shypka-iFSvn82XfGo-unsplash.jpg);
+    background-position: bottom;
+    background-size: cover;
+    padding: 50px 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.4;
+}
+
+.hero-content {
+    z-index: 99;
+}
+
+.hero h2 {
+    font-size: 35px;
+    text-align: center;
+    color: white;
+    margin: 0 0 20px 0;
+}
+
+.hero p {
+    color: white;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+    .hero h2 {
+        font-size: 25px;
+    }
+    .hero p {
+        text-align: center;
+    }
+}
+
+
+/*Heror Ends*/
+
+
+/*Hosting Begins*/
+
+.hosting {
+    height: 100vh;
+    width: 100vw;
+}
+
+.hosting-header {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 20px;
+    background: rgb(196, 227, 248);
+}
+
+.hosting-header p {
+    font-size: 30px;
+    color: #333333;
+}
+
+.hosting-content {
+    min-height: calc(100vh - 60px);
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.hosting-card {
+    position: relative;
+    width: 300px;
+    min-height: 500px;
+    border: 2px solid silver;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.recommended-container {
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    height: 30px;
+    width: 250px;
+    border: 2px solid rgb(65, 169, 245);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(65, 169, 245);
+}
+
+.hosting-card-header {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hosting-card-header h3 {
+    font-size: 30px;
+}
+
+.hosting-cost {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hosting-cost p {
+    font-size: 35px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hosting-cost p img {
+    height: 25px;
+    width: 25px;
+}
+
+.hosting-details {
+    height: 300px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0 0 0;
+}
+
+.hosting-submit-btn-container {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hosting-submit-btn-container.active {
+    display: none;
+}
+
+.hosting-submit-btn-container input {
+    padding: 15px 40px;
+    border: 2px solid rgb(65, 169, 245);
+    background: rgb(65, 169, 245);
+    font-size: 15px;
+    color: white;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1100px) {
+    .hosting-content {
+        flex-direction: column;
+    }
+    .hosting-card {
+        width: 400px;
+        margin: 0 0 20px 0;
+    }
+    .hosting {
+        height: max-content;
+    }
+    .hosting-header {
+        margin: 0 0 20px 0;
+    }
+    .hosting-card {
+        margin: 0 0 40px 0;
+    }
+    .recommended-container {
+        left: 18%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .recommended-container {
+        left: 20px;
+    }
+    .hosting-header {
+        height: 200px;
+    }
+    .hosting {
+        height: max-content;
+    }
+    .hosting-content {
+        min-height: max-content;
+        flex-direction: column;
+        padding: 40px 0;
+    }
+    .hosting-card {
+        margin: 0 0 40px 0;
+        width: 80%;
+    }
+    .hosting-card:last-child {
+        margin: 0;
+    }
+}
+
+
+/*Hosting Ends*/
+
+
+/*Chats Begins*/
+
+#chats {
+    position: fixed;
+    top: 90%;
+    left: 94%;
+    height: 50px;
+    width: 50px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+}
+
+#chats img {
+    height: 100%;
+    width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+    #chats {
+        left: 90%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    #chats {
+        left: 85%;
+    }
+}
+
+@media only screen and (max-width: 300px) {
+    #chats {
+        top: 90%;
+        left: 80%;
+    }
+}
+
+#main-chat {
+    position: fixed;
+    bottom: 15%;
+    left: 75%;
+    height: max-content;
+    width: 300px;
+    background: rgb(196, 227, 248);
+    border-radius: 10px;
+    display: none;
+    transition: 0.3s ease;
+    z-index: 888;
+}
+
+#main-chat.active {
+    display: block;
+}
+
+.main-chat-top {
+    height: max-content;
+    width: 100%;
+}
+
+.main-chat-top-top {
+    height: 30px;
+    width: 100%;
+    padding: 0 10px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.cancel-icon {
+    position: relative;
+    height: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.cancel-icon::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 1px;
+    width: 15px;
+    background: black;
+    transform: rotate(45deg);
+}
+
+.cancel-icon::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 1px;
+    width: 15px;
+    background: black;
+    transform: rotate(-45deg);
+}
+
+.main-chat-top-bottom {
+    height: 30px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10px;
+}
+
+.main-chat-top-bottom img {
+    height: 30px;
+    width: 30px;
+    margin: 0 5px 0 0;
+}
+
+.main-chat-top-bottom p {
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.main-chat-customer-detail {
+    height: max-content;
+    width: 100%;
+    padding: 20px 10px;
+}
+
+.main-chat-customer-detail p {
+    font-size: 12px;
+    color: #333333;
+}
+
+.main-chat-customer-detail p a {
+    text-decoration: none;
+    color: rgb(65, 169, 245);
+    cursor: pointer;
+}
+
+.main-chat-details-top img {
+    height: 12px;
+    width: 20px;
+    transition: 0.3s ease;
+}
+
+.main-chat-details-top img.active {
+    transform: rotate(180deg);
+}
+
+.main-chat-details-top.user {
+    display: none;
+}
+
+.new-user-details {
+    height: max-content;
+    width: 100%;
+}
+
+.new-user-details.active {
+    display: none;
+    transition: 0.4s ease-in-out;
+}
+
+.detail {
+    height: max-content;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.detail label {
+    margin: 5px 0;
+    color: #333333;
+}
+
+.detail input {
+    height: 40px;
+    width: 100%;
+    background: rgb(209, 229, 243);
+    border: 1px solid #333333;
+    border-radius: 5px;
+    padding: 0 5px;
+    font-size: 15px;
+    outline: none;
+}
+
+.detail-submit-btn-container {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.detail-submit-btn-container .submit-btn {
+    height: 40px;
+    width: 90%;
+    background: transparent;
+    font-size: 15px;
+    border: 1px solid #333333;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.main-chat-details-bottom {
+    height: 200px;
+    width: 100%;
+    overflow-y: auto;
+    display: none;
+}
+
+.main-chatbox-content {
+    height: max-content;
+    width: 100%;
+}
+
+.main-chat-details-bottom.active {
+    display: block;
+}
+
+.no-chat-yet {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+}
+
+.no-chat-yet p {
+    text-align: center;
+}
+
+.no-chat-yet.active {
+    display: none;
+}
+
+.sender-column {
+    height: max-content;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px 10px 10px 0;
+}
+
+.sender-column .message-container {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: flex-end;
+    z-index: 90;
+}
+
+.sender-column .message-container p {
+    border: 2px solid rgb(65, 169, 245);
+    padding: 10px 15px;
+    background: rgb(65, 169, 245);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.reciever-column {
+    height: max-content;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 0 10px 10px;
+}
+
+.reciever-column .message-container {
+    height: 100%;
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    z-index: 90;
+}
+
+.reciever-column .message-container p {
+    border: 2px solid rgb(65, 169, 245);
+    padding: 10px 15px;
+    background: rgb(65, 169, 245);
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.chats-bottom {
+    height: 40px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin: 5px 0 0 0;
+}
+
+.chats-bottom.active {
+    display: none;
+}
+
+.typed-message {
+    min-height: 90%;
+    max-height: 90%;
+    min-width: 80%;
+    max-width: 80%;
+    outline: none;
+    border: none;
+    background: rgb(151, 210, 252);
+    padding: 5px;
+    font-size: 15px;
+    margin: 0 10px 0 0;
+    z-index: 90;
+}
+
+.submit-btn {
+    padding: 10px 15px;
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 10px;
+    z-index: 90;
+}
+
+.submit-btn img {
+    height: 100%;
+    width: 100%;
+}
+
+@media screen and (max-width: 1050px) {
+    #main-chat {
+        left: 65%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #main-chat {
+        left: 60%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #main-chat {
+        left: 40%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #main-chat {
+        left: 25%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    #main-chat {
+        left: 15%;
+    }
+}
+
+@media screen and (max-width: 300px) {
+    #main-chat {
+        width: 250px;
+        left: 5%;
+    }
+}
+
+
+/*Chats Ends*/

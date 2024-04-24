@@ -1,0 +1,101 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    max-width: 100vw;
+    min-width: 100vw;
+    width: 100vw;
+    overflow-x: hidden;
+    background: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#forget {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.forget-pass-form {
+    width: 35vw;
+    border: 2px solid #3FA9FA;
+    border-radius: 10px;
+    padding: 0 20px;
+}
+
+.form-header {
+    height: 80px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-header h2 {
+    color: #3FA9FA;
+}
+
+.form-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-content label {
+    margin: 5px 0;
+    color: #3FA9FA;
+}
+
+.form-content input {
+    height: 40px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding: 0 5px;
+    background: #c5ddf0;
+}
+
+.form-content input::placeholder {
+    font-size: 15px;
+}
+
+.submit-btn-container {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-btn {
+    padding: 10px 15px;
+    border: 2px solid #3FA9FA;
+    color: #3FA9FA;
+    border-radius: 10px;
+    background: transparent;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.error {
+    display: none;
+}
+
+.error.active {
+    display: block;
+    width: 100%;
+    background: rgb(236, 86, 86);
+    padding: 5px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+}

@@ -1,0 +1,67 @@
+#support-reply {
+    height: max-content;
+    width: 100vw;
+    padding: 0 20px;
+}
+
+.support-reply {
+    height: 100%;
+    width: 100%;
+}
+
+.support-reply-top {
+    height: max-content;
+    width: 100%;
+}
+
+.support-reply-top h3 {
+    font-weight: 300;
+    padding: 20px 0;
+}
+
+.details {
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+}
+
+.details label {
+    color: silver;
+    margin: 5px;
+}
+
+.question-reply {
+    margin: 0 0 10px 0;
+}
+
+.error {
+    color: red;
+}
+
+.details textarea {
+    max-width: 100%;
+    min-width: 100%;
+    max-height: 50vh;
+    min-height: 50vh;
+    outline: none;
+    border: 1px solid silver;
+    padding: 5px;
+    font-size: 15px;
+}
+
+.submit-btn-container {
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-btn-container .submit-btn {
+    padding: 10px 25px;
+    border: 1px solid rgb(3, 3, 47);
+    border-radius: 10px;
+    background: none;
+    font-size: 15px;
+    cursor: pointer;
+}

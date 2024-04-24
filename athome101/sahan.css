@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    background: #3FA9FA;
+    width: 100vw;
+    overflow-x: hidden;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#signin {
+    height: 100vh;
+    width: 100vw;
+}
+
+.signin {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.signin-form {
+    width: 30vw;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+    background: white;
+    padding: 0 20px;
+}
+
+.signin-header {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-content {
+    width: 100%;
+}
+
+.details {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.details label {
+    margin: 5px;
+}
+
+.details input {
+    height: 40px;
+    width: 100%;
+    outline: none;
+    padding: 0 10px;
+}
+
+.error {
+    color: red;
+}
+
+.dont {
+    margin: 5px 0;
+}
+
+.signin-btn-container {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.submit-btn {
+    padding: 10px 20px;
+    border-radius: 50px;
+    border: 2px solid silver;
+    background: transparent;
+    cursor: pointer;
+    color: silver;
+    transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+    border: 2px solid #3FA9FA;
+    color: #3FA9FA;
+}
+
+.forget {
+    margin: 5px 0;
+}
+
+@media only screen and (max-width: 1000px) {
+    .signin-form {
+        width: 40vw;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .signin-form {
+        width: 50vw;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    .signin-form {
+        width: 70vw;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .signin-form {
+        width: 90vw;
+    }
+    label {
+        font-size: 12px;
+    }
+    .dont {
+        font-size: 12px;
+    }
+    .dont a {
+        font-size: 12px;
+    }
+    .forget a {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 250px) {
+    .signin-form {
+        width: 95vw;
+    }
+}
